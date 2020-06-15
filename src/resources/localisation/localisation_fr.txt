@@ -1,0 +1,100 @@
+﻿#Localisation FR
+Your Resources:Vos resources
+Selected Territory:Territoire séléctionné
+Production:Production
+Stock:Stock
+Not Your Territory:Ce n'est pas votre territoire
+Already Building In Territory:Il y a déjà un batiment dans ce territoire
+Not Military Building:Il n'y a pas de bâtiment militaire
+Not Building Found:Aucun bâtiment trouvé
+Bad Building:Mauvais Bâtiment
+Bad Territory Target:Mauvais territoire cible
+Not Territory Selected:Aucun territoire sélectionné
+Same Territory:Même territoire
+No Troop Selected:Aucune troupe sélectionnée
+Troop Not In Territory:La troupe n'est pas dans le territoire
+Not a Neighbour:Les territoires ne sont pas voisins
+Not Enough Resource:Vous n'avez pas assez de resources
+The Troop:La troupe
+Not Exist:n'existe pas
+The Class:La classe
+Not Instanciate:n'a pu être instanciée
+Owner:Propriétaire
+Already Troop In Construction:Il y a déjà des troupes en construction
+Play:Jouer
+Settings:Options
+Credits:Crédits
+Exit:Quitter
+Authors:Arya Jemo, Bastien Lepesant et Lucas Nicosia
+No Troop In Territory:Vous n'avez pas de troupes dans ce territoire
+Not Your Troop:Ce n'est pas une de vos troupes
+The Building:Le batiment
+Language:Langue
+Return:Retour
+Next Turn:Tour suivant
+Not Directory:n'est pas un répertoire
+Is Directory:est un répertoire
+File Already Exist:Le fichier existe déjà
+File Dont Exist:Le fichier n'existe pas
+Bad Loading:Le fichier n'a pas pu être chargé correctement
+Next Turn:Tour suivant
+New Game:Nouvelle partie
+Load Game:Charger une partie
+Normal Game:Partie normale
+Random Game:Partie aléatoire
+Editor:Editeur
+Not Your Turn:Ce n'est pas votre tour
+Mountain Territory:Territoire montagneux
+Water Territory:Territoire d'eau
+Editor:Editeur
+Water:Eau
+Plain:Plaine
+Forest:Forêt
+Desert:Désert
+Mountain:Montagne
+Capital:Capitale
+Wrong Target:Ce joueur n'existe pas
+Already Allied:Vous êtes déja allié avec ce joueur
+Not Allied:Vous n'êtes pas allié avec ce joueur
+Alliance:Alliance
+Who Alliance:Avec qui voulez vous vous alliez ?
+Close:Fermer
+Already Asked: Déjà demandée
+Local:Local
+Online:En ligne
+Ask Alliance: Voulez vous être l'allié de 
+Yes:Oui
+No:Non
+Asked Alliance: Vous avez demandé une alliance avec 
+End Of Game: Fin de la partie
+Replay: Voulez vous rejouer ?
+Launch: Lancer
+Help: Aide
+Easys number: Nombre d'IA facile
+Normals number: Nombre d'IA normale
+Players number: Nombre de joueurs
+AI number: Nombre d'IA ( syle de jeu aléatoire )
+Save Ok: Sauvegarde effectuée
+Host:Héberger
+Join::Rejoindre
+Port:Port
+IP:IP
+Change prod:Changer prod
+Change stock:Changer stock
+Auto:Auto
+AutoProdHelpText:Ceci remplira tous les territoires avec une production et un stock aléatoire
+Define players:Vous devez définir tous les joueurs avant de sauvegarder
+Barracks:Caserne
+Factory:Usine
+Ramparts:Murailles
+Player:Joueur
+Easy:IA Facile
+Normal:IA Normale
+Editor map:Carte éditeur
+Alliance Accepted:Vous avez acceptez l'alliance
+Alliance Destroy:Vous avez détruit l'alliance
+Alliance Asked:Vous avez demandé une alliance
+Building Created:Vous avez commencé la construction d'un building
+Troop Created:Vous avez commencé la construction d'une troop
+Troop Moved:La troupe se déplace
+Alliance Rejected:Vous avez rejetté l'alliance

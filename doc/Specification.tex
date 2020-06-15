@@ -1,0 +1,148 @@
+\section{Cahier des Charges}
+	
+  \subsection{Calendrier}
+
+  Durant toute la durée du projet, nous avons un calendrier précis à respecter :  \\ \\
+  %Création du tableau	
+  \begin{tabular}{|c|c|c|}
+  \hline \textbf{Semaine du : } & \textbf{Objectif} \\
+  \hline 19 Janvier & Cahier des charges \\
+  \hline 26 Janvier & UML modèle \\
+  \hline 02 Février & UML moteur \\
+  \hline 09 Février &Prototype graphique \\
+  \hline 02 Mars & \textbf{Point d'avancement 1 : démo du prototype du projet} \\
+  \hline 09 Mars & Mise en place Junit + Log4j \\
+  \hline 23 Mars & Mise en place rédaction LaTex \\
+  \hline 06 Avril & Squelette des slides \\
+  \hline 13 Avril & \textbf{Point d'avancement 2 : pré-soutenance du projet} \\
+  \hline 18 Mai & Finalisation du projet + \textbf{Remise de projet ( au plus tard le 24 mai )} \\
+  \hline 25 Mai & \textbf{Soutenances de projet : Mardi 26 et Mercredi 27 Mai} \\
+  \hline 
+  \end{tabular}
+  %Fin Tableau
+	
+  \subsection{Environnement de travail}
+  Durant le projet, nous allons utiliser les outils suivants ( sur nos ordinateurs personnels ) : \begin{itemize}
+  \item L'IDE Java \textbf{Eclipse}
+  \item Le logiciel de gestion de versions \textbf{SVN}.
+  \end{itemize}
+
+\section{Objectif du projet}
+
+  \subsubsection{Solution envisagée}
+    Dans toute cette partie, nous ajouterons de la couleur suivante \textcolor{red}{\textbf{les objectifs bonus que nous aimerions réaliser si le temps nous le permet}}.
+    Comme résultat final, nous voulons obtenir un jeu jouable sur Linux, Windows et Mac. Ce dernier doit comporter un moteur de jeu, un moteur graphique et permettre de jouer contre d'autres joueurs et/ou contre l'ordinateur.
+    \textcolor{red}{\textbf{Le jeu est jouable en réseau, à plusieurs.}}
+  \subsubsection{Méthodes envisagées}
+
+  L'idée du jeu que nous voulons réaliser peut se diviser en 3 parties : 
+  \begin{itemize}
+    \vspace{1cm}
+    \item \textbf{\underline{Menu de jeu}} : Lors du lancement du jeu, le logiciel affichera en premier temps un Menu permettant au joueur de réaliser les actions suivantes : 
+    
+      \begin{itemize}
+  
+	\item Lancer une nouvelle partie.
+	\item Charger une partie existante ( ou supprimer une sauvegarde existante ).
+	\item Quitter le jeu.
+  
+      \end{itemize}
+    \vspace{1cm}
+    \item \textbf{\underline{Génération de carte}} : Notre logiciel devra permettre la génération d'une carte de jeu, composée d'un ensemble de territoires ayant chacun 2 caractéristiques  liées: 
+      \begin{itemize}
+	\item Une réserve des trois ressources différentes du jeu : nourriture, or et bois.
+	\item Une production différente pour chacune des trois ressources
+      \end{itemize}
+      De plus, chaque joueur disposera {d'une capitale}, l'unique premier territoire  lui appartenant ( la capitale dispose des mêmes caractéristiques que les autres territoires ). 
+      La génération évitera que deux capitales soient directement voisines au début du jeu. Le reste des territoires sera neutre.
+      Lors du lancement d'une partie, le joueur aura la possibilité de générer la map avec 3 modes différents : 
+      \begin{itemize}
+	\item \textbf{Mode normal} : Il peut choisirs 3 paramètres, et le logiciel se charge du reste :
+	
+	\begin{itemize}
+	  \item Le nombre de joueurs.
+	  \item Le taux de production durant tout le jeu  : faible, moyenne, importante, etc.
+	  \item L'emplacement des capitales : Soit il les pose lui même, soit elles le sont aléatoirement.
+	\end{itemize}
+  
+	\item \textbf{Mode aléatoire} : Tous les paramètres du jeu sont fixés de manière totalement aléatoire, sans aucune contrainte : le nombre de joueurs, l'ordre des tours de chaque joueur, l'emplacement des capitales, la réserve et la production de chaque territoire, etc.
+	\item \textbf{Mode éditeur} : Ouverture d'un mode édition, permettant la modification des tous les paramètres de la partie : nombre de joueurs ( un nombre maximum sera tout de même fixé ), emplacement des capitales, réserve et production de chaque territoire, etc.
+      \end{itemize}
+    \vspace{1cm}
+    \item \textbf{\underline{Moteur de jeu}} : Lorsqu'une partie démarre, chaque joueur a donc une capitale. Le jeu se déroule au tour par tour, sur la même machine. Suivant le choix de création de la carte, un ordre de jeu entre les joueurs est défini. Durant le tour d'un joueur, celui-ci peut réaliser différentes actions, réparties en 2 phases :
+      \begin{itemize}
+	\vspace{0.5cm}
+	\item \textbf{Phase de Gestion} : Le joueur peut : 
+	  \begin{itemize} 
+	    \item \underline{Créer un bâtiment} ( unique ) sur chacun de ses territoires. Il existe 3 types de bâtiments, chacun ayant des caractéristiques et un temps de construction différents : 
+	      \begin{itemize}
+		\item Le Bâtiment de production : celui-ci augmente la production de toutes les ressources du territoire en question de X \% ( X reste à définir pour des questions d'équilibrage ).
+		\item La Caserne : ce bâtiment sert à la production de soldats.
+		\textcolor{red}{\textbf{Plusieurs types de bâtiments militaires, associés à différents groupes de soldats: Caserne, Ecurie, etc.}}
+		\item Le Bastion : ce bâtiment octroie un bonus de défense aux troupes présentes sur le territoire en question.
+	      \end{itemize}
+	    \underline{N.B} : Les capitales sont considérées comme possédant chacun des 3 bâtiments. Elles ont donc une production accélérée et une défense augmentée par 
+	      rapport aux autres territoires. Elles permettent aussi la production de soldats.
+	    \item \underline{Produire des soldats} : Sur chaque territoire possédant une caserne, le joueur peut lancer la production d'un bataillon de soldats. 
+	      Chaque soldat dispose d'une valeur d'attaque et d'une valeur de défense. Il existe plusieurs types d'unités différents ( ex : guerrier, chevalier, roi, etc ). 
+	      Par conséquent, chaque unité dispose d'un temps de construction propre, d'un nombre de soldats par bataillon propre, et d'une valeur d'attaque et de défense propres. 
+	      Toutes ces informations ne sont pas encore fixées pour des raisons d'équilibrage.
+	    \item \underline{Déplacer ses soldats} : Chaque bataillon peut se déplacer d'un territoire par tour. Les déplacements sur les territoires alliés ( les territoires alliés comprennent 
+	      ceux du joueur ET ceux de ses alliés ) sont sans conséquences. Les déplacements sur un territoire ennemi ou neutre vide entraînent la capture immédiate de celui-ci. Les déplacements 
+	      sur un territoire occupé par des unités ennemies entraîneront un combat lors de la phase en question. Le vainqueur capturera le territoire.
+	    \item \underline{Gérer ses alliances} : Le joueur peut demander à n'importe quel autre la création d'un pacte. Dès lors, le jeu demande au potentiel allié sa réponse, directement 
+	      pendant le tour du premier ( ceci permet de n'avantager personne lors de la phase de gestion ). A l'inverse, il peut choisir de rompre un pacte déjà existant. Dans ce cas, 
+	      l'autre joueur concerné n'est pas informé jusqu'à la phase de combat et devra anticiper ou deviner en fonction des déplacements du traitre.
+	      Toutes les informations de relations entre les différents pays et leurs frontières seront traitées à l'aide de graphes.
+	  \end{itemize}
+	\vspace{0.5cm}
+	\item \textbf{Phase de Combat} :
+	  La deuxième phase consiste à la réalisation des combats. Celle-ci se déroule en même temps pour tous les joueurs. Pour commencer, les ruptures d'alliance sont annoncées. Le programme analyse la carte, et pour chaque territoire où au moins deux unités non alliées sont présentes simultanément, un combat a lieu. Ceci comprend le cas où deux unités alliées se trouvent sur le même territoire, mais l'un des deux joueurs a rompu le pacte pendant sa phase de gestion.
+	  Le déroulement d'un combat est divisé en plusieurs étapes :
+      
+	  \begin{itemize}
+	    \item Calcul des valeurs de combat des joueurs : pour chaque joueur différent présent dans le combat, une valeur de combat est calculée. Celle-ci est obtenue en multipliant le nombre de soldats de chaque type par la valeur d'attaque de ce type. Dans le cas où le territoire où se déroule le combat appartient à un joueur, ce sont les valeurs de défense de ses soldats qui sont prises en compte.
+	      \textcolor{red}{\textbf{Intégration d'unités maritimes, combats navales et amélioration du gameplay.}}
+	    \item Une fois les valeurs de combat calculées, le jeu affiche le pourcentage de chances de chaque joueur de remporter le combat.
+	      Dans le cas où deux joueurs sont alliés, on additionne leurs valeurs.
+	    \item Enfin, l'issue du combat est calculée à partir des chances de chacun des joueurs de gagner. Les unités de tous les perdants sont détruites, le gagnant capture le territoire. Dans le cas où les attaquants sont des alliés, celui qui avait la plus grande valeur de combat obtient le territoire, l'autre obtient X  \% ( X reste à définir pour des questions d'équilibrage ) des productions en ressources du territoire.
+	  \end{itemize}
+	  Une fois tous les combats effectués, le tour suivant peut commencer avec la phase de gestion du premier joueur.
+	  
+      \end{itemize}
+      Pendant une partie, le joueur doit avoir accès à un menu lui permettant de sauvegarder sa partie, d'en charger une autre ou enfin de quitter.
+    \vspace{1cm}
+    \item \textbf{\underline{Moteur Graphique}} : Notre logiciel sera capable de gérer un moteur graphique. Celui-ci aura pour but d'afficher à l'écran toutes les informations nécéssaires à l'utilisateur pour jouer. Cela comprend les options suivantes :
+      \begin{itemize}
+	\item Affichage des menus, avec boutons.
+	\item Affichage de la carte vue de dessus, des différents territoires avec surlignage des frontières, ainsi que des troupes ( de même pour le mode édition ).
+	  Chaque joueur sera représenté d'une couleur différente.
+	\item Permettre à l'utilisateur de séléctionner ses territoires et ses troupes afin d'y effectuer les actions de son choix. Affichage d'un menu diplomatique 
+	  afin d'y ajouter ou de rompre des alliances.
+	\item Lors de la phase de combat, affichage des informations et des résultats de chaque combat.
+
+      \end{itemize}
+
+    \vspace{1cm}
+    \item \textbf{\underline{Ambiance sonore}} : 
+      \textcolor{red}{\textbf{Ajout de musiques d'ambiances différentes selon les niveaux.}}
+
+    \vspace{1cm}
+    \item \textbf{\underline{IA}} : Le jeu devra permettre, lors de la séléction du nombre de joueurs, de choisir de jouer contre l'ordinateur. Il proposera alors plusieurs niveaux de difficultés correspondants à des IAs de plus en plus fortes, ayant des stratégies de plus en plus élaborées.
+  \end{itemize}
+
+\section{Livraison attendues}
+
+  \subsubsection{Programmes}
+    Nous rendrons la totalité du code source de notre programme, ainsi qu'un éxecutable du résultat final.
+  \subsubsection{Documents à remettre}
+    Nous rendrons égalements les documents suivants : 
+    \begin{itemize}
+      \item Une notice d'utilisation de notre logiciel.
+      \item La Javadoc de notre code source.
+      \item Un rapport sur la réalisation du projet .
+    \end{itemize}
+  
+  \subsubsection{Autres supports}
+    Nous rendrons aussi le jeu dans une version exécutable et jouable.
+    De plus, nous réaliserons une soutenance de projet ( avec diaporama ) le Mardi 26 ou le Mercredi 27 Mai 2015, afin de présenter le résultat obtenu.

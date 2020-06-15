@@ -1,0 +1,55 @@
+\documentclass[a4paper,11 pt,fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[frenchb]{babel}
+\usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm]{geometry}
+\usepackage{array}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage{graphicx}
+\usepackage{sectsty}
+\usepackage{titlesec}
+
+\title{\textbf{Projet Génie Logiciel} \vspace{3\baselineskip}\\
+  Rapport du Projet\vspace{2\baselineskip}}
+\author{Bastien Lepesant, Arya Jemo et Lucas Nicosia.}
+\date{25 Mai 2015}
+
+\graphicspath{{Images/}}
+
+\begin{document}
+
+  \def\chaptername{Partie}
+
+  \sectionfont{\large}
+
+  \titleformat{\chapter}[display]{\normalfont\huge\bfseries}{}{20pt}{\huge}
+
+  \titlespacing*{\chapter}{0pt}{-50pt}{10pt}
+ 
+  \maketitle
+  \tableofcontents
+ 
+  \chapter{Introduction}
+    \input{Introduction.tex}
+  
+  \chapter{Spécification}
+    \input{Specification.tex}
+  
+  \chapter{Réalisation}
+    \input{Realisation.tex}
+  
+  \chapter{Manuel Utilisateur}
+    \input{Manuel_Utilisateur.tex}
+
+  \chapter{Déroulement du projet}
+    \input{Deroulement.tex}
+  
+  \chapter{Conclusion}
+    \input{Conclusion.tex}
+    
+    \chapter{Remerciements}
+\input{Remerciements.tex}
+
+\end{document}

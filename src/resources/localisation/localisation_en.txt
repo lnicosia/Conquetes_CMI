@@ -1,0 +1,100 @@
+#Localisation EN
+Your Resources:Your Resources
+Selected Territory:Selected Territory
+Production:Production
+Stock:Stock
+Not Your Territory:This territory is not yours
+Already Building In Territory:There is already a building in this territory
+Not Military Building:This territory needs barracks
+Not Building Found:The building was not found
+Bad Building:Wrong building
+Bad Territory Target:Wrong target
+Not Territory Selected:No selected territory
+Same Territory:Same territory
+No Troop Selected:No troop selected
+Troop Not In Territory:Your troop is not in the territory
+Not a Neighbour:The territories are not neighbours
+Not Enough Resource:You do not have enough resources
+The Troop:The troop
+Not Exist:does not exist
+The Class:The class
+Not Instanciate:could not be instanciated 
+Owner:Owner
+Already Troop In Construction:A troop is already in construction
+Play:Play
+Settings:Settings
+Credits:Credits
+Exit:Exit
+Authors:Arya Jemo, Bastien Lepesant and Lucas Nicosia
+No Troop In Territory:There are no troops in the territory
+Not Your Troop:This troop does not belong to you
+The Building:The Building
+Language:Language
+Return:Return
+Next Turn:Next turn
+Not Directory:is not a directory
+Is Directory:is a directory
+File Already Exist:The file already exist
+File Dont Exist:The file don't exist
+Bad Loading:The file has not load correctly
+Next Turn:Next turn
+New Game:New game
+Load Game:Load game
+Normal Game:Normal game
+Random Game:Random game
+Editor:Editor
+Not Your Turn:It is not your turn
+Mountain Territory:Mountain territory
+Water Territory:Water territory
+Editor:Editor
+Water:Water
+Plain:Plain
+Forest:Forest
+Desert:Desert
+Mountain:Mountain
+Capital:Capital
+Wrong Target:This player don't exist
+Already Allied:You are already allied with this player
+Not Allied:You are not allied with this player
+Alliance:Alliance
+Who Alliance: With who you want to do an Alliance ?
+Close:Close
+Already Asked:Already Asked
+Local:Local
+Online:Online
+Ask Alliance: Do you want to be ally with 
+Yes:Yes
+No:No
+Asked Alliance: You ask an alliance
+End Of Game: End of game
+Replay: Do you want to play again ?
+Launch:Launch
+Help: Help
+Easys number: Easy AI number
+Normals number: Normal AI number
+Players number: Players number
+AI number: AI number ( random gameplay style )
+Save Ok: Save with succes
+Host:Host
+Join:Join
+Port:Port
+IP:IP
+Change prod:Change prod
+Change stock:Change stock
+Auto:Auto
+AutoProdHelpText:This will fill all the territories with a random production and stock
+Define players:You have to define every player before saving
+Player:Player
+Easy:Easy AI
+Normal:Normal AI
+Barracks:Barracks
+Factory:Factory
+Ramparts:Ramparts
+Editor map:Editor map
+Alliance Accepted:You accepted the alliance
+Alliance Destroy:You destroy the alliance
+Alliance Asked:You asked an alliance
+Building Created:You begin to create a building
+Troop Created:You begin to create a troop
+Troop Moved:The troop is moving
+Alliance Rejected:You rejected the alliance
